@@ -1,0 +1,9 @@
+sex,organ_id,ensembl_id,cell_label,annotation_method
+Female,http://purl.obolibrary.org/obo/UBERON_0000948,ENSG00000145703,Monocyte-derived Mφ,azimuth
+Female,http://purl.obolibrary.org/obo/UBERON_0000948,ENSG00000145703,Monocyte-derived Mφ,celltypist
+Male,http://purl.obolibrary.org/obo/UBERON_0000948,ENSG00000145703,Monocyte-derived Mφ,azimuth
+Male,http://purl.obolibrary.org/obo/UBERON_0000948,ENSG00000145703,Monocyte-derived Mφ,celltypist
+Male,http://purl.obolibrary.org/obo/UBERON_0002048,ENSG00000145703,Monocyte-derived Mφ,azimuth
+Male,http://purl.obolibrary.org/obo/UBERON_0002048,ENSG00000145703,Monocyte-derived Mφ,celltypist
+Female,http://purl.obolibrary.org/obo/UBERON_0002048,ENSG00000145703,Monocyte-derived Mφ,azimuth
+Female,http://purl.obolibrary.org/obo/UBERON_0002048,ENSG00000145703,Monocyte-derived Mφ,celltypist

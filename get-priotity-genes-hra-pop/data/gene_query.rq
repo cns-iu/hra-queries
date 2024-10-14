@@ -1,0 +1,23 @@
+PREFIX ccf: <http://purl.org/ccf/>
+PREFIX HRApop: <https://purl.humanatlas.io/graph/hra-pop>
+PREFIX UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+PREFIX FMA: <http://purl.org/sig/ont/fma/fma>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX CCF: <https://purl.humanatlas.io/graph/ccf>
+PREFIX dbxref: <http://www.geneontology.org/formats/oboInOwl#hasDbXref>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX HGNC: <http://purl.bioontology.org/ontology/HGNC/> # Replace with the actual namespace for ns1
+
+SELECT ?cell_id ?ensembl_id ?gene_id ?gene_label ?mean_expr
+WHERE {
+    ?cell_summary ccf:has_cell_summary_row ?cell_summary_row .
+    ?cell_summary_row ccf:gene_expr ?gene_expr .
+    ?gene_expr ccf:ensembl_id ?ensembl_id ;
+               ccf:gene_id ?gene_id ;
+               ccf:gene_label ?gene_label ;
+               ccf:mean_gene_expr_value ?mean_expr .
+    ?cell_summary_row ccf:cell_id ?cell_id .
+    
+    # Filter for the specific Ensembl ID
+    # FILTER(?ensembl_id = "ENSG00000136250.12")
+}
