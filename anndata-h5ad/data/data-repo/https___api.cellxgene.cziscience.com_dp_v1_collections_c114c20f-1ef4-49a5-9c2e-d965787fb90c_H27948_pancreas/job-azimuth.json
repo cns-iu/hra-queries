@@ -1,0 +1,32 @@
+{
+  "organ": "UBERON:0001264",
+  "matrix": {
+    "class": "File",
+    "path": "data.h5ad"
+  },
+  "algorithms": [
+    {
+      "azimuth": {
+        "referenceDataDir": {
+          "class": "Directory",
+          "path": "/N/project/hra/hra-workflows-runner/raw-data/models/azimuth"
+        },
+        "queryLayersKey": "raw"
+      },
+      "crosswalk": {
+        "table": {
+          "class": "File",
+          "path": "/N/project/hra/hra-workflows-runner/crosswalking-tables/azimuth.csv"
+        },
+        "tableLabelColumn": "Annotation_Label",
+        "tableClidColumn": "CL_ID",
+        "tableMatchColumn": "CL_Match"
+      },
+      "summarize": {
+        "annotationMethod": "azimuth",
+        "cellSource": "https://api.cellxgene.cziscience.com/dp/v1/collections/c114c20f-1ef4-49a5-9c2e-d965787fb90c#H27948$pancreas"
+      },
+      "directory": "azimuth"
+    }
+  ]
+}

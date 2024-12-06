@@ -1,0 +1,28 @@
+{
+  "organ": "UBERON:0001264",
+  "matrix": {
+    "class": "File",
+    "path": "data.h5ad"
+  },
+  "algorithms": [
+    {
+      "celltypist": {
+        "queryLayersKey": "raw"
+      },
+      "crosswalk": {
+        "table": {
+          "class": "File",
+          "path": "/N/project/hra/hra-workflows-runner/crosswalking-tables/celltypist.csv"
+        },
+        "tableLabelColumn": "Annotation_Label",
+        "tableClidColumn": "CL_ID",
+        "tableMatchColumn": "CL_Match"
+      },
+      "summarize": {
+        "annotationMethod": "celltypist",
+        "cellSource": "https://api.cellxgene.cziscience.com/dp/v1/collections/38833785-fac5-48fd-944a-0f62a4c23ed1#Donor11$pancreas"
+      },
+      "directory": "celltypist"
+    }
+  ]
+}

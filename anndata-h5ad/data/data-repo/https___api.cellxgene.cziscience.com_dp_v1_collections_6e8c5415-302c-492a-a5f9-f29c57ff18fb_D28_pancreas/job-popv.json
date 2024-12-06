@@ -1,0 +1,36 @@
+{
+  "organ": "UBERON:0001264",
+  "matrix": {
+    "class": "File",
+    "path": "data.h5ad"
+  },
+  "algorithms": [
+    {
+      "popv": {
+        "referenceDataDir": {
+          "class": "Directory",
+          "path": "/N/project/hra/hra-workflows-runner/raw-data/models/popv/reference-data"
+        },
+        "modelsDir": {
+          "class": "Directory",
+          "path": "/N/project/hra/hra-workflows-runner/raw-data/models/popv/models"
+        },
+        "queryLayersKey": "raw"
+      },
+      "crosswalk": {
+        "table": {
+          "class": "File",
+          "path": "/N/project/hra/hra-workflows-runner/crosswalking-tables/popv.csv"
+        },
+        "tableLabelColumn": "Annotation_Label",
+        "tableClidColumn": "CL_ID",
+        "tableMatchColumn": "CL_Match"
+      },
+      "summarize": {
+        "annotationMethod": "popv",
+        "cellSource": "https://api.cellxgene.cziscience.com/dp/v1/collections/6e8c5415-302c-492a-a5f9-f29c57ff18fb#D28$pancreas"
+      },
+      "directory": "popv"
+    }
+  ]
+}

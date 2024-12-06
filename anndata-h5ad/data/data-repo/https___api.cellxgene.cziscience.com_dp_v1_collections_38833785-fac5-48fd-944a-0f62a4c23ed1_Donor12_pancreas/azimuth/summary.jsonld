@@ -1,0 +1,596 @@
+{
+  "@context": {
+    "CL": {
+      "@id": "http://purl.obolibrary.org/obo/CL_",
+      "@prefix": true
+    },
+    "ASCTB-TEMP": {
+      "@id": "https://purl.org/ccf/ASCTB-TEMP_",
+      "@prefix": true
+    },
+    "ctpop": {
+      "@id": "https://cns-iu.github.io/hra-cell-type-populations-supporting-information/data/enriched_rui_locations.jsonld#",
+      "@prefix": true
+    },
+    "as_3d_id": {
+      "@type": "@id"
+    },
+    "as_id": {
+      "@type": "@id"
+    },
+    "all_collisions": {
+      "@id": "ccf:has_collision_summary"
+    },
+    "collision_source": {
+      "@reverse": "ccf:has_collision_summary",
+      "@type": "@id"
+    },
+    "collisions": {
+      "@id": "ccf:has_collision_item"
+    },
+    "corridor_source": {
+      "@reverse": "ccf:has_corridor",
+      "@type": "@id"
+    },
+    "corridor": {
+      "@id": "ccf:has_corridor"
+    },
+    "summaries": {
+      "@id": "ccf:has_cell_summary"
+    },
+    "cell_source": {
+      "@reverse": "ccf:has_cell_summary",
+      "@type": "@id"
+    },
+    "annotation_method": {
+      "@id": "ccf:cell_annotation_method"
+    },
+    "summary": {
+      "@id": "ccf:has_cell_summary_row"
+    },
+    "cell_id": {
+      "@type": "@id"
+    },
+    "count": {
+      "@id": "ccf:cell_count"
+    },
+    "percentage": {
+      "@id": "ccf:percentage_of_total"
+    },
+    "@base": "http://purl.org/ccf/",
+    "@vocab": "http://purl.org/ccf/",
+    "ccf": "http://purl.org/ccf/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "label": "rdfs:label",
+    "description": "rdfs:comment",
+    "link": "ccf:url",
+    "sex": "ccf:sex",
+    "age": "ccf:age",
+    "bmi": "ccf:bmi",
+    "consortium_name": "ccf:consortium_name",
+    "provider_name": "ccf:tissue_provider_name",
+    "provider_uuid": "ccf:tissue_provider_uuid",
+    "donor": {
+      "@id": "ccf:comes_from",
+      "@type": "@id"
+    },
+    "samples": {
+      "@reverse": "donor"
+    },
+    "sections": {
+      "@id": "ccf:subdivided_into_sections",
+      "@type": "@id"
+    },
+    "datasets": {
+      "@id": "ccf:generates_dataset",
+      "@type": "@id"
+    },
+    "sample_type": "ccf:sample_type",
+    "section_count": "ccf:section_count",
+    "section_size": "ccf:section_size",
+    "section_units": "ccf:section_size_unit",
+    "section_number": "ccf:section_number",
+    "rui_location": {
+      "@id": "ccf:has_registration_location",
+      "@type": "@id"
+    },
+    "ccf_annotations": {
+      "@id": "ccf:collides_with",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "representation_of": {
+      "@id": "ccf:representation_of",
+      "@type": "@id"
+    },
+    "reference_organ": {
+      "@id": "ccf:has_reference_organ",
+      "@type": "@id"
+    },
+    "extraction_set_for": {
+      "@id": "ccf:extraction_set_for",
+      "@type": "@id"
+    },
+    "extraction_set": {
+      "@id": "ccf:has_extraction_set",
+      "@type": "@id"
+    },
+    "organ_owner_sex": "ccf:organ_owner_sex",
+    "side": "ccf:organ_side",
+    "rui_rank": "ccf:rui_rank",
+    "slice_thickness": "ccf:slice_thickness",
+    "slice_count": "ccf:slice_count",
+    "object": {
+      "@id": "ccf:has_object_reference",
+      "@type": "@id"
+    },
+    "creation_date": "dcterms:created",
+    "updated_date": "ccf:updated_date",
+    "creator": "dcterms:creator",
+    "creator_first_name": "ccf:creator_first_name",
+    "creator_last_name": "ccf:creator_last_name",
+    "placement": {
+      "@reverse": "ccf:placement_for"
+    },
+    "placement_date": "dcterms:created",
+    "rotation_order": "ccf:rotation_order",
+    "dimension_units": "ccf:dimension_unit",
+    "rotation_units": "ccf:rotation_unit",
+    "scaling_units": "ccf:scaling_unit",
+    "translation_units": "ccf:translation_unit",
+    "source": {
+      "@id": "ccf:placement_for",
+      "@type": "@id"
+    },
+    "target": {
+      "@id": "ccf:placement_relative_to",
+      "@type": "@id"
+    },
+    "x_rotation": "ccf:x_rotation",
+    "y_rotation": "ccf:y_rotation",
+    "z_rotation": "ccf:z_rotation",
+    "x_scaling": "ccf:x_scaling",
+    "y_scaling": "ccf:y_scaling",
+    "z_scaling": "ccf:z_scaling",
+    "x_translation": "ccf:x_translation",
+    "y_translation": "ccf:y_translation",
+    "z_translation": "ccf:z_translation",
+    "x_dimension": "ccf:x_dimension",
+    "y_dimension": "ccf:y_dimension",
+    "z_dimension": "ccf:z_dimension",
+    "ontology_terms": {
+      "@id": "ccf:has_ontology_term",
+      "@type": "@id"
+    },
+    "technology": "ccf:technology",
+    "thumbnail": "ccf:thumbnail",
+    "file": "ccf:file_url",
+    "file_format": "ccf:file_format",
+    "file_subpath": "ccf:file_subpath"
+  },
+  "@graph": [
+    {
+      "@type": "CellSummary",
+      "annotation_method": "azimuth",
+      "modality": "sc_transcriptomics",
+      "cell_source": "https://api.cellxgene.cziscience.com/dp/v1/collections/38833785-fac5-48fd-944a-0f62a4c23ed1#Donor12$pancreas",
+      "summary": [
+        {
+          "cell_id": "CL:0000738",
+          "cell_label": "immune",
+          "gene_expr": [
+            {
+              "gene_id": "HGNC:914",
+              "gene_label": "B2M",
+              "ensembl_id": "ENSG00000166710",
+              "mean_gene_expr_value": 3.414764165878296
+            },
+            {
+              "gene_id": "HGNC:11881",
+              "gene_label": "TMSB4X",
+              "ensembl_id": "ENSG00000205542",
+              "mean_gene_expr_value": 3.755394697189331
+            },
+            {
+              "gene_id": "HGNC:11879",
+              "gene_label": "TMSB10",
+              "ensembl_id": "ENSG00000034510",
+              "mean_gene_expr_value": 3.2746310234069824
+            },
+            {
+              "gene_id": "HGNC:132",
+              "gene_label": "ACTB",
+              "ensembl_id": "ENSG00000075624",
+              "mean_gene_expr_value": 2.9746603965759277
+            },
+            {
+              "gene_id": "HGNC:8881",
+              "gene_label": "PFN1",
+              "ensembl_id": "ENSG00000108518",
+              "mean_gene_expr_value": 2.5352540016174316
+            },
+            {
+              "gene_id": "HGNC:10372",
+              "gene_label": "RPLP1",
+              "ensembl_id": "ENSG00000137818",
+              "mean_gene_expr_value": 2.6814074516296387
+            },
+            {
+              "gene_id": "HGNC:1874",
+              "gene_label": "CFL1",
+              "ensembl_id": "ENSG00000172757",
+              "mean_gene_expr_value": 1.9702293872833252
+            },
+            {
+              "gene_id": "HGNC:10402",
+              "gene_label": "RPS19",
+              "ensembl_id": "ENSG00000105372",
+              "mean_gene_expr_value": 2.4309945106506348
+            },
+            {
+              "gene_id": "HGNC:10329",
+              "gene_label": "RPL27A",
+              "ensembl_id": "ENSG00000166441",
+              "mean_gene_expr_value": 2.499964952468872
+            },
+            {
+              "gene_id": "HGNC:10387",
+              "gene_label": "RPS14",
+              "ensembl_id": "ENSG00000164587",
+              "mean_gene_expr_value": 2.40963077545166
+            }
+          ],
+          "count": 2035,
+          "@type": "CellSummaryRow",
+          "percentage": 0.22669043110170436
+        },
+        {
+          "cell_id": "CL:0000171",
+          "cell_label": "beta",
+          "gene_expr": [
+            {
+              "gene_id": "HGNC:12029",
+              "gene_label": "TRAC",
+              "ensembl_id": "ENSG00000277734",
+              "mean_gene_expr_value": 2.26871919631958
+            },
+            {
+              "gene_id": "HGNC:12156",
+              "gene_label": "TRBC1",
+              "ensembl_id": "ENSG00000211751",
+              "mean_gene_expr_value": 2.001138925552368
+            },
+            {
+              "gene_id": "HGNC:1673",
+              "gene_label": "CD3D",
+              "ensembl_id": "ENSG00000167286",
+              "mean_gene_expr_value": 1.98003351688385
+            },
+            {
+              "gene_id": "HGNC:1695",
+              "gene_label": "CD7",
+              "ensembl_id": "ENSG00000173762",
+              "mean_gene_expr_value": 1.1942654848098755
+            },
+            {
+              "gene_id": "HGNC:11639",
+              "gene_label": "TCF7",
+              "ensembl_id": "ENSG00000081059",
+              "mean_gene_expr_value": 0.8002201318740845
+            },
+            {
+              "gene_id": "HGNC:16355",
+              "gene_label": "GAS5",
+              "ensembl_id": "ENSG00000234741",
+              "mean_gene_expr_value": 2.1562411785125732
+            },
+            {
+              "gene_id": "HGNC:6024",
+              "gene_label": "IL7R",
+              "ensembl_id": "ENSG00000168685",
+              "mean_gene_expr_value": 0.4823041558265686
+            },
+            {
+              "gene_id": "HGNC:1666",
+              "gene_label": "CD37",
+              "ensembl_id": "ENSG00000104894",
+              "mean_gene_expr_value": 1.161773681640625
+            },
+            {
+              "gene_id": "HGNC:1694",
+              "gene_label": "CD69",
+              "ensembl_id": "ENSG00000110848",
+              "mean_gene_expr_value": 1.2750229835510254
+            },
+            {
+              "gene_id": "HGNC:397",
+              "gene_label": "ALAS2",
+              "ensembl_id": "ENSG00000158578",
+              "mean_gene_expr_value": 0.02355307899415493
+            }
+          ],
+          "count": 6635,
+          "@type": "CellSummaryRow",
+          "percentage": 0.7391110616018715
+        },
+        {
+          "cell_id": "CL:0002410",
+          "cell_label": "quiescent_stellate",
+          "gene_expr": [
+            {
+              "gene_id": "HGNC:11219",
+              "gene_label": "SPARC",
+              "ensembl_id": "ENSG00000113140",
+              "mean_gene_expr_value": 3.2594351768493652
+            },
+            {
+              "gene_id": "HGNC:5414",
+              "gene_label": "IFITM3",
+              "ensembl_id": "ENSG00000142089",
+              "mean_gene_expr_value": 3.3448596000671387
+            },
+            {
+              "gene_id": "HGNC:5476",
+              "gene_label": "IGFBP7",
+              "ensembl_id": "ENSG00000163453",
+              "mean_gene_expr_value": 2.621840715408325
+            },
+            {
+              "gene_id": "HGNC:130",
+              "gene_label": "ACTA2",
+              "ensembl_id": "ENSG00000107796",
+              "mean_gene_expr_value": 2.432939052581787
+            },
+            {
+              "gene_id": "HGNC:2198",
+              "gene_label": "COL1A2",
+              "ensembl_id": "ENSG00000164692",
+              "mean_gene_expr_value": 1.8868261575698853
+            },
+            {
+              "gene_id": "HGNC:2201",
+              "gene_label": "COL3A1",
+              "ensembl_id": "ENSG00000168542",
+              "mean_gene_expr_value": 1.8685777187347412
+            },
+            {
+              "gene_id": "HGNC:12692",
+              "gene_label": "VIM",
+              "ensembl_id": "ENSG00000026025",
+              "mean_gene_expr_value": 2.2693915367126465
+            },
+            {
+              "gene_id": "HGNC:2197",
+              "gene_label": "COL1A1",
+              "ensembl_id": "ENSG00000108821",
+              "mean_gene_expr_value": 1.9671564102172852
+            },
+            {
+              "gene_id": "HGNC:1692",
+              "gene_label": "CD63",
+              "ensembl_id": "ENSG00000135404",
+              "mean_gene_expr_value": 1.792639970779419
+            },
+            {
+              "gene_id": "HGNC:6561",
+              "gene_label": "LGALS1",
+              "ensembl_id": "ENSG00000100097",
+              "mean_gene_expr_value": 1.80672025680542
+            }
+          ],
+          "count": 208,
+          "@type": "CellSummaryRow",
+          "percentage": 0.023170324161746685
+        },
+        {
+          "cell_id": "CL:0000115",
+          "cell_label": "endothelial",
+          "gene_expr": [
+            {
+              "gene_id": "HGNC:5414",
+              "gene_label": "IFITM3",
+              "ensembl_id": "ENSG00000142089",
+              "mean_gene_expr_value": 4.094676971435547
+            },
+            {
+              "gene_id": "HGNC:5476",
+              "gene_label": "IGFBP7",
+              "ensembl_id": "ENSG00000163453",
+              "mean_gene_expr_value": 3.0507845878601074
+            },
+            {
+              "gene_id": "HGNC:5397",
+              "gene_label": "IFI27",
+              "ensembl_id": "ENSG00000165949",
+              "mean_gene_expr_value": 3.317047595977783
+            },
+            {
+              "gene_id": "HGNC:12692",
+              "gene_label": "VIM",
+              "ensembl_id": "ENSG00000026025",
+              "mean_gene_expr_value": 2.82763671875
+            },
+            {
+              "gene_id": "HGNC:9844",
+              "gene_label": "RAMP2",
+              "ensembl_id": "ENSG00000131477",
+              "mean_gene_expr_value": 2.3484673500061035
+            },
+            {
+              "gene_id": "HGNC:11220",
+              "gene_label": "SPARCL1",
+              "ensembl_id": "ENSG00000152583",
+              "mean_gene_expr_value": 2.539273500442505
+            },
+            {
+              "gene_id": "HGNC:3711",
+              "gene_label": "FKBP1A",
+              "ensembl_id": "ENSG00000088832",
+              "mean_gene_expr_value": 3.0236434936523438
+            },
+            {
+              "gene_id": "HGNC:11219",
+              "gene_label": "SPARC",
+              "ensembl_id": "ENSG00000113140",
+              "mean_gene_expr_value": 2.5763916969299316
+            },
+            {
+              "gene_id": "HGNC:7",
+              "gene_label": "A2M",
+              "ensembl_id": "ENSG00000175899",
+              "mean_gene_expr_value": 2.550844669342041
+            },
+            {
+              "gene_id": "HGNC:10487",
+              "gene_label": "S100A10",
+              "ensembl_id": "ENSG00000197747",
+              "mean_gene_expr_value": 2.696763038635254
+            }
+          ],
+          "count": 75,
+          "@type": "CellSummaryRow",
+          "percentage": 0.008354684192937507
+        },
+        {
+          "cell_id": "CL:0002079",
+          "cell_label": "ductal",
+          "gene_expr": [
+            {
+              "gene_id": "HGNC:3711",
+              "gene_label": "FKBP1A",
+              "ensembl_id": "ENSG00000088832",
+              "mean_gene_expr_value": 3.473555564880371
+            },
+            {
+              "gene_id": "HGNC:6174",
+              "gene_label": "ITM2B",
+              "ensembl_id": "ENSG00000136156",
+              "mean_gene_expr_value": 3.240591287612915
+            },
+            {
+              "gene_id": "HGNC:537",
+              "gene_label": "ANXA2",
+              "ensembl_id": "ENSG00000182718",
+              "mean_gene_expr_value": 3.1122817993164062
+            },
+            {
+              "gene_id": "HGNC:5246",
+              "gene_label": "HSPB1",
+              "ensembl_id": "ENSG00000106211",
+              "mean_gene_expr_value": 3.6336147785186768
+            },
+            {
+              "gene_id": "HGNC:5476",
+              "gene_label": "IGFBP7",
+              "ensembl_id": "ENSG00000163453",
+              "mean_gene_expr_value": 2.5894134044647217
+            },
+            {
+              "gene_id": "HGNC:5414",
+              "gene_label": "IFITM3",
+              "ensembl_id": "ENSG00000142089",
+              "mean_gene_expr_value": 3.033628463745117
+            },
+            {
+              "gene_id": "HGNC:4933",
+              "gene_label": "HLA-C",
+              "ensembl_id": "ENSG00000204525",
+              "mean_gene_expr_value": 3.067147970199585
+            },
+            {
+              "gene_id": "HGNC:2047",
+              "gene_label": "CLDN5",
+              "ensembl_id": "ENSG00000184113",
+              "mean_gene_expr_value": 1.9568543434143066
+            },
+            {
+              "gene_id": "HGNC:1527",
+              "gene_label": "CAV1",
+              "ensembl_id": "ENSG00000105974",
+              "mean_gene_expr_value": 1.7483949661254883
+            },
+            {
+              "gene_id": "HGNC:1692",
+              "gene_label": "CD63",
+              "ensembl_id": "ENSG00000135404",
+              "mean_gene_expr_value": 2.0426931381225586
+            }
+          ],
+          "count": 13,
+          "@type": "CellSummaryRow",
+          "percentage": 0.0014481452601091678
+        },
+        {
+          "cell_id": "CL:0002573",
+          "cell_label": "schwann",
+          "gene_expr": [
+            {
+              "gene_id": "HGNC:5414",
+              "gene_label": "IFITM3",
+              "ensembl_id": "ENSG00000142089",
+              "mean_gene_expr_value": 3.6172122955322266
+            },
+            {
+              "gene_id": "HGNC:12692",
+              "gene_label": "VIM",
+              "ensembl_id": "ENSG00000026025",
+              "mean_gene_expr_value": 3.782697916030884
+            },
+            {
+              "gene_id": "HGNC:6174",
+              "gene_label": "ITM2B",
+              "ensembl_id": "ENSG00000136156",
+              "mean_gene_expr_value": 3.6385815143585205
+            },
+            {
+              "gene_id": "HGNC:2095",
+              "gene_label": "CLU",
+              "ensembl_id": "ENSG00000120885",
+              "mean_gene_expr_value": 3.2574806213378906
+            },
+            {
+              "gene_id": "HGNC:1709",
+              "gene_label": "CD9",
+              "ensembl_id": "ENSG00000010278",
+              "mean_gene_expr_value": 2.9895029067993164
+            },
+            {
+              "gene_id": "HGNC:11760",
+              "gene_label": "TFPI",
+              "ensembl_id": "ENSG00000003436",
+              "mean_gene_expr_value": 2.730423927307129
+            },
+            {
+              "gene_id": "HGNC:9344",
+              "gene_label": "PRCP",
+              "ensembl_id": "ENSG00000137509",
+              "mean_gene_expr_value": 2.6812069416046143
+            },
+            {
+              "gene_id": "HGNC:537",
+              "gene_label": "ANXA2",
+              "ensembl_id": "ENSG00000182718",
+              "mean_gene_expr_value": 3.042546272277832
+            },
+            {
+              "gene_id": "HGNC:4030",
+              "gene_label": "FXYD6",
+              "ensembl_id": "ENSG00000137726",
+              "mean_gene_expr_value": 2.111544132232666
+            },
+            {
+              "gene_id": "HGNC:32483",
+              "gene_label": "OST4",
+              "ensembl_id": "ENSG00000228474",
+              "mean_gene_expr_value": 3.0735602378845215
+            }
+          ],
+          "count": 11,
+          "@type": "CellSummaryRow",
+          "percentage": 0.0012253536816308344
+        }
+      ]
+    }
+  ]
+}

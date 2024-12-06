@@ -1,0 +1,33 @@
+{
+  "id": "https://api.cellxgene.cziscience.com/dp/v1/collections/38833785-fac5-48fd-944a-0f62a4c23ed1#Donor11$pancreas",
+  "handler": "cellxgene",
+  "organ": "UBERON:0001264",
+  "collection": "38833785-fac5-48fd-944a-0f62a4c23ed1",
+  "donor": "Donor11",
+  "tissue": "pancreas",
+  "assets": [
+    {
+      "id": "a671706a-19c9-40d4-836d-2a8aec9fc3a3",
+      "dataset": "7a455e3b-dd79-499b-95c9-8b1b2dde5339"
+    }
+  ],
+  "tissueId": "UBERON:0001264",
+  "dataset_link": "https://cellxgene.cziscience.com/collections/38833785-fac5-48fd-944a-0f62a4c23ed1",
+  "dataset_technology": "OTHER",
+  "publication": "https://doi.org/10.1038/s41586-020-2157-4",
+  "publication_title": "Construction of a human cell landscape at single-cell level",
+  "publication_lead_author": "Xiaoping Han",
+  "consortium_name": "CxG",
+  "provider_name": "CxG",
+  "provider_uuid": "f6841a8a-cef2-4421-b632-fc34ff5c27d8",
+  "assay_type": "[{\"label\":\"microwell-seq\",\"ontology_term_id\":\"EFO:0030002\"}]",
+  "donor_id": "https://api.cellxgene.cziscience.com/dp/v1/collections/38833785-fac5-48fd-944a-0f62a4c23ed1#Donor11",
+  "organ_id": "http://purl.obolibrary.org/obo/UBERON_0001264",
+  "block_id": "https://api.cellxgene.cziscience.com/dp/v1/collections/38833785-fac5-48fd-944a-0f62a4c23ed1#Donor11$pancreas_Block",
+  "dataset_id": "https://api.cellxgene.cziscience.com/dp/v1/collections/38833785-fac5-48fd-944a-0f62a4c23ed1#Donor11$pancreas",
+  "donor_sex": "female",
+  "donor_development_stage": "11th week post-fertilization human stage",
+  "donor_race": "Han Chinese",
+  "dataset_cell_count": 2830,
+  "dataset_gene_count": 26405
+}

@@ -1,0 +1,141 @@
+{
+  "id": "https://api.cellxgene.cziscience.com/dp/v1/collections/e5f58829-1a66-40b5-a624-9046778e74f5#TSP9$exocrine%20pancreas",
+  "handler": "cellxgene",
+  "organ": "UBERON:0001264",
+  "collection": "e5f58829-1a66-40b5-a624-9046778e74f5",
+  "donor": "TSP9",
+  "tissue": "exocrine pancreas",
+  "assets": [
+    {
+      "id": "834217b9-78e6-4bf4-84ba-c2a19cc5d4ed",
+      "dataset": "50a18e6a-797b-40bd-aa07-6ed50a1f2cf6"
+    },
+    {
+      "id": "c716f11c-8d86-4f47-be4c-bb2ce8e189e2",
+      "dataset": "3149e7d3-1ae4-4b59-a54b-73e9f591b699"
+    },
+    {
+      "id": "57a6046c-21b5-42dd-9622-c617d06c8731",
+      "dataset": "cb872c2c-64a4-405f-96c3-03124405cc6c"
+    },
+    {
+      "id": "4dae005d-27cd-470d-bff0-a01696cdac5d",
+      "dataset": "64efbda3-bf95-4b30-8b5c-366d9b5b22f6"
+    },
+    {
+      "id": "8ab2b628-d777-4c22-9e85-a924f9bc579e",
+      "dataset": "c18b60ea-7dbc-4705-a3dc-e29da4e43c68"
+    },
+    {
+      "id": "b8def755-3558-4dc8-a7e3-6c99b05503b8",
+      "dataset": "49184aac-08dc-42a7-bd01-92751cbb47a7"
+    },
+    {
+      "id": "b9c6d8d5-9deb-4d3a-92ff-326ec1f94e92",
+      "dataset": "cbab13ec-d454-4d3b-8ab0-86715b140d83"
+    },
+    {
+      "id": "2f7fad6a-4880-4142-91e3-df5c5eeaa7f1",
+      "dataset": "027f528e-ee88-49fd-89b3-509d35687649"
+    },
+    {
+      "id": "916f8cd9-2ecc-4d95-809c-52184ae4e4bd",
+      "dataset": "07900e47-7ab4-48d4-a26e-abdd010f4bbf"
+    },
+    {
+      "id": "ceed1cc5-26bd-43e1-8475-3e47ad08030b",
+      "dataset": "570c9c53-fd4b-4480-a2e4-4f3d473e6d68"
+    },
+    {
+      "id": "e9d87ff6-b458-420f-b97a-65f8a34b0c45",
+      "dataset": "e1eef547-e451-4fa0-9af4-4dc94a5dd6ff"
+    },
+    {
+      "id": "96d3573d-6224-4f0b-ab38-cab815b7f3f1",
+      "dataset": "370deafc-9397-4a69-a81d-590d2ee1f7d5"
+    },
+    {
+      "id": "d6f6e6af-cf89-4eef-8a33-0e244370ed78",
+      "dataset": "07350f70-03a5-4c55-a3be-cba25155c2b9"
+    },
+    {
+      "id": "66666516-355e-42c0-ad42-66057f181462",
+      "dataset": "8a967e24-2297-43e5-b8b5-905c021470a6"
+    },
+    {
+      "id": "49d02812-8624-431d-a21e-2fed592b1135",
+      "dataset": "dcdb2682-b2e0-467e-aee3-3a0cb806a4d7"
+    },
+    {
+      "id": "20575022-f982-4222-9ebd-d108d3a2c5c0",
+      "dataset": "791390e1-80c4-4243-afa5-ce825dc2f499"
+    },
+    {
+      "id": "475a3a6e-8818-4eb2-a2a7-67711f34b145",
+      "dataset": "f424cddd-3b14-4a7e-9c31-abbf6f827e1b"
+    },
+    {
+      "id": "6fda60aa-7f7d-4315-b89f-dad6ec83a35d",
+      "dataset": "a18e8ab1-1774-4af5-bb74-feb17d495e4d"
+    },
+    {
+      "id": "2285d072-9b75-4d2e-8bd9-27528c999399",
+      "dataset": "4b53ea1c-8f2d-44fe-ab20-6416d6e9c212"
+    },
+    {
+      "id": "bb05d7a4-4fdd-4d0b-a2b7-46e40734a5e3",
+      "dataset": "f56e0393-c2f3-42f3-93f1-7c8a4ee49d75"
+    },
+    {
+      "id": "9c489448-e144-40bc-a9c0-721ed6a0a8e4",
+      "dataset": "dbcbe0a6-918a-4440-9a56-6d03f0f22df5"
+    },
+    {
+      "id": "bdf2567c-d423-44a7-a260-3265dfb153a6",
+      "dataset": "541ef4e5-8142-4963-95bf-65e37459525b"
+    },
+    {
+      "id": "81c1c8b2-4417-4c69-9dff-bff53c443e24",
+      "dataset": "cd5669be-f929-4ec0-84e4-a98c8eac9944"
+    },
+    {
+      "id": "bffd8b85-06e3-4bf9-93ce-5b1926b524b0",
+      "dataset": "5ee25df3-0ff9-437b-9dca-85a2ba1baa65"
+    },
+    {
+      "id": "dcedf0c2-c35a-4400-a025-8010c8a93dd5",
+      "dataset": "ad99b5b0-d2e2-4fc1-8fb9-4854eeac4069"
+    },
+    {
+      "id": "809c8d11-b843-4e40-9148-e60d1d8e9751",
+      "dataset": "ae46512c-74d3-40d5-8232-a637b8f1bffd"
+    },
+    {
+      "id": "11e9f503-d31a-41d0-9bf3-ce096e1e1e74",
+      "dataset": "eaf5be60-06d9-45e8-a168-5ea54e477e01"
+    },
+    {
+      "id": "865a20d2-b9c9-4523-b513-6d25c8ff8f79",
+      "dataset": "6219f051-e6f1-4589-9891-4a315929dffc"
+    }
+  ],
+  "tissueId": "UBERON:0000017",
+  "dataset_link": "https://cellxgene.cziscience.com/collections/e5f58829-1a66-40b5-a624-9046778e74f5",
+  "dataset_technology": "OTHER",
+  "publication": "https://doi.org/10.1126/science.abl4896",
+  "publication_title": "Tabula Sapiens",
+  "publication_lead_author": "undefined undefined",
+  "consortium_name": "CxG",
+  "provider_name": "CxG",
+  "provider_uuid": "f6841a8a-cef2-4421-b632-fc34ff5c27d8",
+  "assay_type": "[{\"label\":\"10x 3' v3\",\"ontology_term_id\":\"EFO:0009922\"},{\"label\":\"10x 5' transcription profiling\",\"ontology_term_id\":\"EFO:0030004\"},{\"label\":\"Smart-seq2\",\"ontology_term_id\":\"EFO:0008931\"}]",
+  "donor_id": "https://api.cellxgene.cziscience.com/dp/v1/collections/e5f58829-1a66-40b5-a624-9046778e74f5#TSP9",
+  "organ_id": "http://purl.obolibrary.org/obo/UBERON_0001264",
+  "block_id": "https://api.cellxgene.cziscience.com/dp/v1/collections/e5f58829-1a66-40b5-a624-9046778e74f5#TSP9$exocrine%20pancreas_Block",
+  "dataset_id": "https://api.cellxgene.cziscience.com/dp/v1/collections/e5f58829-1a66-40b5-a624-9046778e74f5#TSP9$exocrine%20pancreas",
+  "donor_sex": "male",
+  "donor_development_stage": "37-year-old human stage",
+  "donor_race": "Hispanic or Latin American",
+  "dataset_cell_count": 6699,
+  "dataset_gene_count": 58482
+}
